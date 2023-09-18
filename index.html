@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Pacifico&family=Space+Mono&display=swap" rel="stylesheet">
+  <title>Tip calculator app</title>
+  
+</head>
+<body class="flex h-screen flex-col justify-center items-center bg-[#b6d9dc] ">
+  <div class="header font-bold text-[24px] mb-8 md:mb-14 text-[#00494d]" style="font-family: 'Space Mono', monospace;">
+      S P L I T T E R
+  </div>
+  <div class="bg-white w-96 md:w-auto rounded-[2rem] md:flex" style="font-family: 'Space Mono', monospace;">
+    <div class=" pl-5 bg- m-1 p-2">
+      <div class="text-[#00494d] p-1">
+        <span class="text-[13px]">Bill</span>
+        <br>
+        <span class="absolute  pl-2 text-[#aaa9a9ef] text-[20px]"><img src="/images/icon-dollar.svg" class="pt-2"></span><input type="text" placeholder="0" class="rounded bg-[#ebeded] p-1 text-right text-[#00494d] font-bold w-80" id="bill">
+      </div>
+      <br>
+      <span class="text-[#00494d] pl-1 text-[13px]"> Select Tip %</span>
+      <div class="grid-cols-2 w-80 md:w-auto md:grid-cols-3 grid">
+        <button class="bg-[#00494d] p-1 m-1 rounded text-white font-bold hover:bg-[#23c1a1] focus:bg-[#23c1a1]" onclick="cal(5)" id="btn5">5%</button>
+        <button class="bg-[#00494d] p-1 m-1 rounded text-white font-bold hover:bg-[#23c1a1] focus:bg-[#23c1a1]" onclick="cal(10)" id="btn10">10%</button>
+        <button class="bg-[#00494d] p-1 m-1 rounded text-white font-bold hover:bg-[#23c1a1] focus:bg-[#23c1a1]" onclick="cal(15)" id="btn15">15%</button>
+        <button class="bg-[#00494d] p-1 m-1 rounded text-white font-bold hover:bg-[#23c1a1] focus:bg-[#23c1a1]" onclick="cal(20)" id="btn20">20%</button>
+        <button class="bg-[#00494d] p-1 m-1 rounded text-white font-bold hover:bg-[#23c1a1] focus:bg-[#23c1a1]" onclick="cal(25)" id="btn25">25%</button>
+        <input type="text" class="rounded md:h-3/4 md:w-[100px] m-1 bg-[#ebeded] text-center text-[#00494d] font-bold" id="cstm" placeholder="Custom">
+      </div>
+      <div class="grid">
+        <div class="text-[#00494d] p-1 pt-4">
+          <span class="text-[13px]">Number of People</span>
+          <br>
+          <span class="absolute  pl-2 text-[#aaa9a9ef] text-[20px]"><img src="/images/icon-person.svg" class="pt-2"></span><input type="text" placeholder="0" class="rounded w-80 bg-[#ebeded] p-1 text-right text-[#00494d] font-bold" id="ppls">
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#00494d] rounded-[2rem] text-white m-6 p-2" style="font-family: 'Space Mono', monospace;">
+      <div class="flex m-5">
+        <span class="text-[13px] mr-10">Tip Amount <span class="text-[8px] text-[#6a9fa2]"> <br> /person</span></span>
+        <div class="text-[#23c1a1] text-[24px] text-left  ml-9" id="tip_amt">$0.00</div>
+      </div>
+      <div class="flex m-5">
+        <span class="text-[13px] mr-9">Total <span class="text-[8px] text-[#6a9fa2]"> <br> /person</span></span>
+        <div class="text-[#23c1a1]  text-[24px] text-left ml-20" id="total_amt">$0.00</div>
+      </div>
+      <div class="flex items-center justify-center">
+        <button class="bg-[#486d6f] text-[#2e4243] rounded-xl  font-bold pl-20 pr-20 p-2 mt-7 hover:bg-[#547e7e]" id="reset">RESET</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
