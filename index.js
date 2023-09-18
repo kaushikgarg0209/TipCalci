@@ -4,12 +4,12 @@ function cal (perc)
     var ppls = parseInt(document.getElementById('ppls').value)
 
     var ans = (perc/100 * bill)/ppls
-    var k = ans.toPrecision(2)
-    document.getElementById('tip_amt').innerHTML = '$'+k
+    ans.toPrecision(2)
+    document.getElementById('tip_amt').innerHTML = '$'+ans
 
-    var x = (bill)/ppls
-    k = x.toPrecision(2)
-    document.getElementById('total_amt').innerHTML = '$'+k
+    var x = (bill)/ppls + ans
+    x.toPrecision(2)
+    document.getElementById('total_amt').innerHTML = '$'+x
 
 }
 
