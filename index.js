@@ -3,8 +3,14 @@ function cal (perc)
     var bill = parseInt(document.getElementById('bill').value)
     var ppls = parseInt(document.getElementById('ppls').value)
 
-    document.getElementById('tip_amt').innerHTML = '$'+(perc/100 * bill)/ppls
-    document.getElementById('total_amt').innerHTML = '$'+(bill)/ppls
+    var ans = (perc/100 * bill)/ppls
+    var k = ans.toPrecision(2)
+    document.getElementById('tip_amt').innerHTML = '$'+k
+
+    var x = (bill)/ppls
+    k = x.toPrecision(2)
+    document.getElementById('total_amt').innerHTML = '$'+k
+
 }
 
 document.addEventListener('keypress', function(){
