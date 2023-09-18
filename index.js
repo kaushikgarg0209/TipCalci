@@ -1,14 +1,20 @@
+
+const formatter = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
 function cal (perc)
 {
     var bill = parseInt(document.getElementById('bill').value)
     var ppls = parseInt(document.getElementById('ppls').value)
 
     var ans = (perc/100 * bill)/ppls
-    ans = ans.toFixed(2)
+    ans = formatter.format(ans)
     document.getElementById('tip_amt').innerHTML = '$'+ans
 
-    var x = (bill)/ppls + +ans
-    x = x.toFixed(2)
+    var x = (bill)/ppls + parseInt(ans)
+    x = formatter.format(x)
     document.getElementById('total_amt').innerHTML = '$'+x
 
 }
